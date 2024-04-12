@@ -38,7 +38,7 @@ function Card({todo}){
                 </button>
                 <textarea 
                     type='text' 
-                    className="inline p-2 mt-3 w-64  text-3xl text-black font-bold "
+                    className={`inline p-2 mt-3 w-64  text-3xl text-black font-bold ${ todo.completed ? "line-through": ""} `}
                     value={todoMsg} 
                     onChange={(e)=>{setTodoMsg(e.target.value)}}
                     onClick={()=>{setIsTodoEditable(true)}}
